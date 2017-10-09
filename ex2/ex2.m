@@ -93,6 +93,9 @@ pause;
 %  Set options for fminunc
 options = optimset('GradObj', 'on', 'MaxIter', 400);
 
+% To continue using the 'trust-region' algorithm and avoid a warning
+options = optimset(options,'Algorithm','trust-region');
+
 %  Run fminunc to obtain the optimal theta
 %  This function will return theta and the cost 
 [theta, cost] = ...

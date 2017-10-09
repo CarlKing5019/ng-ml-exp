@@ -10,6 +10,8 @@ g = zeros(size(z));
 %               vector or scalar).
 
 
+% Use ./ to map to every element.
+g = 1 ./ (1+exp(-z));
 
 
 

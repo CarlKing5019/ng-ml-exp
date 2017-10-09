@@ -112,6 +112,9 @@ lambda = 1;
 % Set Options
 options = optimset('GradObj', 'on', 'MaxIter', 400);
 
+% To continue using the 'trust-region' algorithm and avoid a warning
+options = optimset(options,'Algorithm','trust-region');
+
 % Optimize
 [theta, J, exit_flag] = ...
 	fminunc(@(t)(costFunctionReg(t, X, y, lambda)), initial_theta, options);
