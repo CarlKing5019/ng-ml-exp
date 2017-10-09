@@ -19,12 +19,8 @@ for iter = 1:num_iters
 
 
 
-
-
-
-
-
-
+    % Calculate the gradient
+    theta = theta - 1 / m * alpha * X' * (X * theta - y);
 
 
     % ============================================================

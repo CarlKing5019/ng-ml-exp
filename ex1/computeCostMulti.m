@@ -14,7 +14,12 @@ J = 0;
 %               You should set J to the cost.
 
 
+% Calculate the hypothesis function
+h = X * theta;
 
+
+% Calculate the cost function
+J = 1 / (2 * m) * (h - y)' * (h - y);
 
 
 % =========================================================================
